@@ -2,7 +2,7 @@
   // DB Credentials
   define('DB_SERVER', 'localhost');
   define('DB_USERNAME', 'root');
-  define('DB_PASSWORD', '123456');
+  define('DB_PASSWORD', '');
   define('DB_NAME', 'phploginapp');
 
   // Attempt to connect to MySQL
@@ -11,3 +11,13 @@
   } catch(PDOException $e) {
     die("ERROR: Could not connect. " . $e->getMessage());
   }
+
+  $dsn = 'mysql:host=localhost;dbname=todo';
+  $username = 'root';
+  $password = '';
+  $options = [];
+  try {
+  $connection = new PDO($dsn, $username, $password, $options);
+  } catch(PDOException $e) {
+
+}
